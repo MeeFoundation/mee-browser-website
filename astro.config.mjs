@@ -23,9 +23,6 @@ export default defineConfig({
     mode: "standalone",
   }),
   site: site,
-  redirects: {
-    "/docs": "/docs/users/mee-browser",
-  },
   integrations: [
     starlight({
       ...sharedConfig,
