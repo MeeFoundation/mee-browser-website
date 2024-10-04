@@ -76,6 +76,7 @@ export default defineConfig({
         EditLink: "./src/components/starlight/EditLink.astro",
         Header: "./src/components/starlight/DocsHead.astro",
         PageFrame: "./src/components/starlight/PageFrame.astro",
+        Footer: "./src/components/starlight/Footer.astro",
       },
     }),
     tailwind(),
