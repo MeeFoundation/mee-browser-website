@@ -39,13 +39,19 @@ export default defineConfig({
       social: {
         github: github,
       },
-      customCss: process.env.NO_GRADIENTS ? [] : ["/src/assets/landing.css"],
+      customCss: process.env.NO_GRADIENTS
+        ? []
+        : [
+            "/src/assets/landing.css",
+            "/src/styles/base.css",
+            "bootstrap-icons/font/bootstrap-icons.css",
+          ],
       locales: {
         root: { label: "English", lang: "en" },
       },
       sidebar: [
         {
-          label: "For Users",
+          label: "Users",
           items: [
             {
               label: "Common",
@@ -54,7 +60,7 @@ export default defineConfig({
           ],
         },
         {
-          label: "For Developers",
+          label: "Developers",
           items: [
             {
               label: "Common",
@@ -66,8 +72,10 @@ export default defineConfig({
         },
       ],
       components: {
-        Sidebar: "./src/components/MultiSidebar.astro",
-        EditLink: "./src/components/EditLink.astro",
+        Sidebar: "./src/components/starlight/Sidebar.astro",
+        EditLink: "./src/components/starlight/EditLink.astro",
+        Header: "./src/components/starlight/DocsHead.astro",
+        PageFrame: "./src/components/starlight/PageFrame.astro",
       },
     }),
     tailwind(),
