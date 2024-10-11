@@ -1,17 +1,17 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import Header from "@components/Header.astro";
-import Footer from "@components/Footer.astro";
+import { Header, Footer } from "mee-components";
+import { header, footer } from "../../astro.config.mjs";
 ---
 
 <Layout title="Mee Browser">
+  <Header header={header} />
   <main class="">
     <article
-      class="relative flex h-full min-h-screen w-screen flex-col items-center justify-between gap-16 overflow-hidden"
+      class="relative mt-27 flex h-full min-h-screen w-screen flex-col items-center justify-between gap-16 overflow-hidden"
     >
-      <Header />
       <section
-        class="section top-0 z-100 mb-3.5 flex h-full w-screen items-center justify-center"
+        class="section top-0 z-100 mb-3.5 mt-16 flex h-full w-screen items-center justify-center"
       >
         <div
           class="flex max-w-150 flex-col items-center justify-center gap-6 px-6 transition-opacity duration-500 md:p-0"
@@ -25,7 +25,7 @@ import Footer from "@components/Footer.astro";
           </div>
         </div>
       </section>
-      <div><Footer mode="dark" /></div>
+      <div><Footer footer={footer} mode="dark" /></div>
     </article>
   </main>
 </Layout>
