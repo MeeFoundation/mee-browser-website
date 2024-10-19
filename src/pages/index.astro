@@ -4,7 +4,8 @@ import { Header, Footer } from "mee-components";
 import { header, footer } from "../../astro.config.mjs";
 ---
 
-<Layout title="Mee Browser">
+<Layout title="Mee Browser Project">
+
   <Header header={header} />
   <main class="">
     <article
@@ -20,7 +21,7 @@ import { header, footer } from "../../astro.config.mjs";
             <h1
               class="marker animate-riseIn text-center text-4xl font-semibold text-gray-900 lg:text-7xl lg:tracking-0.02"
             >
-              Mee Browser
+              Mee Browser Project
             </h1>
           </div>
           <div class="overflow-hidden">
@@ -28,7 +29,7 @@ import { header, footer } from "../../astro.config.mjs";
               class="animation-delay-800 animate-riseIn px-6 text-center text-xl leading-relaxed text-brand-600 underline md:text-2xl"
               href="/docs"
             >
-              Mee Browser Docs <i class="bi bi-arrow-right"></i>
+              Browser Docs <i class="bi bi-arrow-right"></i>
             </a>
           </div>
         </div>
@@ -36,6 +37,7 @@ import { header, footer } from "../../astro.config.mjs";
       <div><Footer footer={footer} mode="dark" /></div>
     </article>
   </main>
+
 </Layout>
 <style>
   .bg-1 {
