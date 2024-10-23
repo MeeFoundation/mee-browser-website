@@ -1,19 +1,25 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import { Header, Footer } from "mee-components";
-import { header, footer } from "../../astro.config.mjs";
+import { Header, Footer, Breadcrumbs } from "mee-components";
+import { header, footer, meeFoundation } from "../../astro.config.mjs";
 ---
 
 <Layout title="Mee Browser Project">
-
-  <Header header={header} />
+  <Header header={header} location="Mee Browser" />
   <main class="">
     <article
       class="relative mt-27 flex h-full min-h-screen w-screen flex-col items-center justify-between gap-16 overflow-hidden"
     >
       <section
-        class="section top-0 z-100 mb-3.5 mt-16 flex h-full w-screen items-center justify-center"
+        class="section top-0 z-100 mb-3.5 mt-16 flex h-full w-screen flex-col items-center justify-center gap-4"
       >
+        <Breadcrumbs
+          className="hidden md:flex"
+          breadcrumbs={[
+            { title: "Projects", link: `${meeFoundation}projects/` },
+            { title: "Mee Browser" },
+          ]}
+        />
         <div
           class="flex max-w-150 flex-col items-center justify-center gap-4 px-6 transition-opacity duration-500 md:p-0"
         >
@@ -26,7 +32,7 @@ import { header, footer } from "../../astro.config.mjs";
           </div>
           <div class="overflow-hidden">
             <a
-              class="animation-delay-800 animate-riseIn px-6 text-center text-xl leading-relaxed text-brand-600 underline md:text-2xl"
+              class="animation-delay-800 block w-full animate-riseIn px-6 text-center text-xl leading-relaxed text-brand-600 underline md:text-2xl"
               href="/docs"
             >
               Browser Docs <i class="bi bi-arrow-right"></i>
@@ -37,7 +43,6 @@ import { header, footer } from "../../astro.config.mjs";
       <div><Footer footer={footer} mode="dark" /></div>
     </article>
   </main>
-
 </Layout>
 <style>
   .bg-1 {

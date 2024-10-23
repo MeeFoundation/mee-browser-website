@@ -21,9 +21,9 @@ export const header = {
   logoLink: meeFoundation,
   links: [
     {
-      name: "Products",
-      link: `${meeFoundation}products/`,
-      id: "products",
+      name: "Projects",
+      link: `${meeFoundation}projects/`,
+      id: "projects",
     },
     {
       name: "Business",
@@ -78,9 +78,9 @@ export const footer = {
   ],
   rightLinks: [
     {
-      name: "Products",
-      link: `${meeFoundation}products/`,
-      id: "products",
+      name: "Projects",
+      link: `${meeFoundation}projects/`,
+      id: "projects",
     },
     {
       name: "Business",
