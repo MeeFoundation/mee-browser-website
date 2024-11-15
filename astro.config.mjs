@@ -6,7 +6,7 @@ import starlight from "@astrojs/starlight";
 export const site = "https://browser.mee.foundation/";
 export const meeFoundation = "https://mee.foundation/";
 export const github = "https://github.com/MeeFoundation/mee-browser-website";
-export const discord = "https://discord.gg/V4vC5zsZ";
+export const discord = "https://discord.gg/PB8qxrQXup";
 export const sharedConfig = {
   title: "Mee Browser",
   logo: {
